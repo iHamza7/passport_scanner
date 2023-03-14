@@ -16,7 +16,7 @@ class _CameraPageState extends State<CameraPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Passport'),
+        title: const Text('Passport scanner'),
       ),
       body: MRZScanner(
         withOverlay: true,
