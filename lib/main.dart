@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
                     padding: EdgeInsets.all(8.0),
                     child: Text('Awaiting for permissions'),
                   ),
-                  Text('Current status: ${snapshot.data?.toString()}'),
+                  Text(' status: ${snapshot.data?.toString()}'),
                 ],
               ),
             ),
