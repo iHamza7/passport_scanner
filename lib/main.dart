@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
                   const CircularProgressIndicator(),
                   const Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: Text('Awaiting for permissions'),
+                    child: Text('Awaiting  permissions'),
                   ),
                   Text('current status: ${snapshot.data?.toString()}'),
                 ],
