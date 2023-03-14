@@ -40,31 +40,33 @@ class _CameraPageState extends State<CameraPage> {
       isParsed = true;
 
       await showDialog<void>(
-          context: context,
-          builder: (context) => AlertDialog(
-                  content: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Text('Document type: ${result.documentType}'),
-                  Text('Country: ${result.countryCode}'),
-                  Text('Surnames: ${result.surnames}'),
-                  Text('Given names: ${result.givenNames}'),
-                  Text('Document number: ${result.documentNumber}'),
-                  Text('Nationality code: ${result.nationalityCountryCode}'),
-                  Text('Birthdate: ${result.birthDate}'),
-                  Text('Sex: ${result.sex}'),
-                  Text('Expriy date: ${result.expiryDate}'),
-                  Text('Personal number: ${result.personalNumber}'),
-                  Text('Personal number 2: ${result.personalNumber2}'),
-                  ElevatedButton(
-                    child: const Text('ok'),
-                    onPressed: () {
-                      isParsed = false;
-                      return Navigator.pop(context, true);
-                    },
-                  ),
-                ],
-              )));
+        context: context,
+        builder: (context) => AlertDialog(
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Text('Document type: ${result.documentType}'),
+              Text('Country: ${result.countryCode}'),
+              Text('Surnames: ${result.surnames}'),
+              Text('Given names: ${result.givenNames}'),
+              Text('Document number: ${result.documentNumber}'),
+              Text('Nationality code: ${result.nationalityCountryCode}'),
+              Text('Birthdate: ${result.birthDate}'),
+              Text('Sex: ${result.sex}'),
+              Text('Expriy date: ${result.expiryDate}'),
+              Text('Personal number: ${result.personalNumber}'),
+              Text('Personal number 2: ${result.personalNumber2}'),
+              ElevatedButton(
+                child: const Text('Save'),
+                onPressed: () {
+                  isParsed = false;
+                  return Navigator.pop(context, true);
+                },
+              ),
+            ],
+          ),
+        ),
+      );
     };
     controller.onError = (error) => debugPrint(error);
 
